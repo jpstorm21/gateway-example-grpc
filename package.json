@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "proto:install": "npm i git+https://github.com/jpstorm21/proto-example-grpc.git",
     "proto:users": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/proyectos-juegos-proto/proto --ts_proto_out=src/users/ node_modules/proyectos-juegos-proto/proto/users.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
-    "proto:all": "npm run proto:install && npm run proto:users"
+    "proto:all": "npm run proto:install"
   },
   "dependencies": {
     "@grpc/grpc-js": "1.7.0",
@@ -30,6 +30,7 @@
     "@nestjs/core": "9.0.0",
     "@nestjs/microservices": "9.0.11",
     "@nestjs/platform-express": "9.0.0",
+    "dotenv": "^16.4.5",
     "proyectos-juegos-proto": "github:jpstorm21/proto-example-grpc",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
